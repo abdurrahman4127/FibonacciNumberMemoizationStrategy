@@ -8,6 +8,7 @@ public class MemoizationStrategyFibonacci {
 
     public static void main(String[] args)
     {
+        long startTime = 0, endTime = 0;  // to calculate execution time
         int n = 50;
 
         /*
@@ -15,12 +16,25 @@ public class MemoizationStrategyFibonacci {
                we can get positive values when n<=92
          */
 
-        fibonacciCache = new long[n + 1];  // array size should be n+1
+        fibonacciCache = new long[n + 1];  // array size should be (n + 1)
+
+        // printing the nth fibonacci number
+        System.out.println(n + " no. fibonacci number -> " + fibonacci(n));
 
         // printing fibonacci numbers up until n
-        for(int i=0; i<=n; i++){
-            System.out.print(fibonacci(i) + " ");
+        System.out.println("fibonacci number up until " + n + " are : ");
+        for(int i=0; i<=n; i++)
+        {
+            // time counting starting
+            startTime = System.nanoTime();
+
+            System.out.println(fibonacci(i) + " ");
+
+            // time counting finishing
+            endTime = System.nanoTime();
         }
+
+        System.out.println("execution time : " + (endTime - startTime) + " nano-seconds");
     }
 
     private static long fibonacci(int n) {
