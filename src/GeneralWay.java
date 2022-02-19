@@ -37,7 +37,7 @@ public class GeneralWay {
     }
 }
 
-/*   approximate test outcome (in nanoseconds) for n numbers [NOT LOOP ; for line no. 23]
+/*   approximate test outcomes (in nanoseconds) for n numbers [NOT LOOP ; for line no. 23]
            2 - 361200
            5 - 622400
            10 - 374400
